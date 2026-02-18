@@ -9,11 +9,15 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const handleSendMessage = async (e) => {
+    console.log("handleSendMessage triggered!"); // New log to confirm function execution
     console.log("Attempting to send message to:", import.meta.env.VITE_BACKEND_URL + "/api/v1/message/send"); // Log the full URL
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    console.log("Backend URL:", backendUrl); // Log the backend URL
+    
     e.preventDefault();
     await axios
       .post(
-        import.meta.env.VITE_BACKEND_URL + "/api/v1/message/send", // Use environment variable for backend URL
+        `${backendUrl}/api/v1/message/send`, // Use environment variable for backend URL
         {
           name,
           email,
@@ -34,7 +38,11 @@ const Contact = () => {
       })
       .catch((error) => {
         console.error("Frontend error sending message:", error); // Log the full error object for debugging
-        toast.error(error.response.data.message);
+        if (error.response) {
+          toast.error(error.response.data.message);
+        } else {
+          toast.error(error.message || "Network Error. Please try again later.");
+        }
       });
   };
 

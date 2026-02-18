@@ -1,6 +1,8 @@
 import express from "express";
 import messageRouter from "./router/messageRouter.js";
 import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 app.use(
@@ -11,6 +13,7 @@ app.use(
   })
 );
 
+console.log("frontend url: ", process.env.FRONTEND_URL);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

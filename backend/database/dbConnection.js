@@ -14,6 +14,7 @@ export const dbConnection = async () => { // Make dbConnection an async function
   }
 
   try {
+    console.log(process.env.MONGO_URI);
     await mongoose.connect(process.env.MONGO_URI, { dbName: "EVENTS_MANAGEMENT" }); // Added 'await'
     console.log("Connected to database!"); // Log success
   } catch (err) {
