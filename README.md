@@ -26,7 +26,7 @@
 ## 📖 About the Project
 
 **AURA Events and Weddings** is a full-stack Event Management System. It features a robust backend for secure data handling and a responsive React frontend for an immersive user experience.
-
+<details>
 ### 📂 Directory Structure
 ```text
 EVENTS_MANAGEMENT/
@@ -50,7 +50,7 @@ EVENTS_MANAGEMENT/
     ├── .env                 # Frontend environment variables
     ├── vite.config.js       # Vite build configuration
     └── package.json         # Frontend dependencies
-
+    <details>
 🚀 Quick Start GuidePrerequisitesNode.js (v16+)MongoDB (Local or Atlas)1️⃣ Server Setup (Backend)Bashcd backend
 npm install
 
