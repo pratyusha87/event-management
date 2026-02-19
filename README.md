@@ -51,6 +51,7 @@ EVENTS_MANAGEMENT/
     ├── vite.config.js       # Vite build configuration
     └── package.json         # Frontend dependencies
 ```
+
 🚀 Quick Start Guide
 Prerequisites
 -Node.js (v16+)
