@@ -50,3 +50,78 @@ EVENTS_MANAGEMENT/
     ├── .env                 # Frontend environment variables
     ├── vite.config.js       # Vite build configuration
     └── package.json         # Frontend dependencies
+
+🚀 Quick Start GuidePrerequisitesNode.js (v16+)MongoDB (Local or Atlas)1️⃣ Server Setup (Backend)Bashcd backend
+npm install
+
+# Create .env file:
+# PORT=4000
+# MONGO_URI=your_db_link
+# FRONTEND_URL=http://localhost:5173
+
+npm run dev
+2️⃣ Client Setup (Frontend)Bash# Open new terminal
+cd frontend
+npm install
+
+🔐 Environment Variables
+To run this project, you will need to add the following environment variables to your .env files.
+
+1. Backend Environment (backend/.env)
+Create a .env file inside the backend folder with the following keys:
+
+PORT=
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/?retryWrites=true&w=majority
+FRONTEND_URL=
+PORT: The port the Express server runs on.
+
+MONGO_URI: Your MongoDB connection string.
+
+FRONTEND_URL: Used for CORS to allow the frontend to talk to the backend.
+
+2. Frontend Environment (frontend/.env)
+Create a .env file inside the frontend folder with the following key:
+
+VITE_BACKEND_URL=
+VITE_BACKEND_URL: Points to your backend server so Axios knows where to send API requests.
+
+🚀 Quick Start GuidePrerequisitesNode.js (v16+)MongoDB (Local or Atlas)
+1️⃣ Server Setup (Backend)
+cd backend
+npm install
+npm run dev
+2️⃣ Client Setup (Frontend)
+Open new terminal
+cd frontend
+npm install
+npm run dev
+The App will run at: http://localhost:5173
+
+## 🔗 API Reference
+POST /api/v1/message/send
+
+### 📩 Send Message
+Submit a new inquiry from the contact form.
+
+- **URL:** `/api/v1/message/send`
+- **Method:** `POST`
+- **Content-Type:** `application/json`
+
+#### Request Parameters
+
+| Parameter | Type     | Required | Description                                      |
+| :-------- | :------- | :------- | :----------------------------------------------- |
+| `name`    | `string` | **Yes**  | The full name of the client.                     |
+| `email`   | `string` | **Yes**  | The client's contact email address.              |
+| `subject` | `string` | **Yes**  | The category of the event (e.g., "Wedding").     |
+| `message` | `string` | **Yes**  | The detailed text of the inquiry.                |
+
+#### 💡 Example Request Body
+
+```json
+{
+  "name": "Pratyusha Sagar",
+  "email": "pratyusha@example.com",
+  "subject": "Wedding Planning",
+  "message": "i need a event planner for wedding."
+}
