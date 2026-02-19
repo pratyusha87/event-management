@@ -54,11 +54,6 @@ EVENTS_MANAGEMENT/
 🚀 Quick Start GuidePrerequisitesNode.js (v16+)MongoDB (Local or Atlas)1️⃣ Server Setup (Backend)Bashcd backend
 npm install
 
-# Create .env file:
-# PORT=4000
-# MONGO_URI=your_db_link
-# FRONTEND_URL=http://localhost:5173
-
 npm run dev
 2️⃣ Client Setup (Frontend)Bash# Open new terminal
 cd frontend
@@ -69,19 +64,15 @@ To run this project, you will need to add the following environment variables to
 
 1. Backend Environment (backend/.env)
 Create a .env file inside the backend folder with the following keys:
-
 PORT=
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/?retryWrites=true&w=majority
 FRONTEND_URL=
 PORT: The port the Express server runs on.
-
 MONGO_URI: Your MongoDB connection string.
-
 FRONTEND_URL: Used for CORS to allow the frontend to talk to the backend.
 
 2. Frontend Environment (frontend/.env)
 Create a .env file inside the frontend folder with the following key:
-
 VITE_BACKEND_URL=
 VITE_BACKEND_URL: Points to your backend server so Axios knows where to send API requests.
 
