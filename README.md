@@ -51,11 +51,18 @@ EVENTS_MANAGEMENT/
     ├── vite.config.js       # Vite build configuration
     └── package.json         # Frontend dependencies
 ```
-🚀 Quick Start GuidePrerequisitesNode.js (v16+)MongoDB (Local or Atlas)1️⃣ Server Setup (Backend)Bashcd backend
+🚀 Quick Start Guide
+Prerequisites
+-Node.js (v16+)
+-MongoDB (Local or Atlas)
+
+1️⃣ Server Setup (Backend)
+cd backend
 npm install
 
 npm run dev
-2️⃣ Client Setup (Frontend)Bash# Open new terminal
+2️⃣ Client Setup (Frontend)
+Open new terminal
 cd frontend
 npm install
 
