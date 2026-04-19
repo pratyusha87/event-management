@@ -2,7 +2,7 @@
 
 ![MERN Stack](https://img.shields.io/badge/MERN-Stack-RE?style=for-the-badge&logo=react&logoColor=61DAFB&color=20232a)
 ![Rest API](https://img.shields.io/badge/Rest_API-Integration-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Private-red?style=for-the-badge)
+
 
 > *Bridging the gap between clients and premium event experiences.*
 
